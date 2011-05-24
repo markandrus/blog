@@ -24,7 +24,7 @@ title  = ARGV.join(' ')
 slug   = slugify(title)
 prefix = Time.now.strftime("%Y-%m-%d")
 datetime = Time.now.strftime("%Y-%m-%d %H:%M:%S")
-file   = "#{prefix}-#{slug}.markdown"
+file   = "#{prefix}-#{slug}.md"
 path   = File.join(root, "_posts/#{file}")
 text   = <<-eos
 ---

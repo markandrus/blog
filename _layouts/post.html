@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>{{ post.title }}</title>
+	<title>{{ page.title }}</title>
 	<link rel="stylesheet" href="/c/screen.css" />
 	<link rel="stylesheet" href="/c/syntax.css" />
 	<!--[if IE]>
@@ -15,9 +15,9 @@
 </head>
 <body id="post" class="hyphenate">
 	<div class="post">
-		<h2 class="post_title"><span>{{ post.title }}</span></h2>
-		<h3 class="post_date"><span>{{ post.date | date_to_string }}</span></h3>
-		{{ post.content }}
+		<h2 class="post_title"><span>{{ page.title }}</span></h2>
+		<h3 class="post_date"><span>{{ page.date | date_to_string }}</span></h3>
+		{{ content }}
 	</div>
 	<div class="posts_wrapper">
 		<div class="posts">
