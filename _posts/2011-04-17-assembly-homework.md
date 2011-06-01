@@ -3,7 +3,7 @@ title: Assembly Homework
 layout: post
 date: 2011-04-17 11:19:08
 ---
-My Computer Systems course uses Bryant and O’Hallaron’s *Computer Systems: A Programmer’s Perspective*. The following is a fun homework assignment during our introduction to Assembly...
+My Computer Systems course uses Bryant and O’Hallaron’s *Computer Systems: A Programmer’s Perspective*. The following is a fun homework assignment from our introduction to Assembly. The language and example assembly is copied directly from the text.
 
 ### Assembly
 {% highlight c %}

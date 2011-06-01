@@ -23,20 +23,21 @@
 		<div class="posts">
 			<div><h3>Posts</h3>
 			<ul class="posts">
-				{% for post in site.posts %}	
+				{% for post in site.posts limit:4 %}	
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}	
 				<li><a id="more" href="/archive/">More &rarr;</a></li>
 			</ul></div>
 			<div><h3>Related</h3>
 			<ul class="posts">
-				{% for post in site.related_posts %}	
+				{% for post in site.related_posts limit:4 %}	
 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}	
 			</ul></div>
 			<div><h3>Projects</h3>
 			<ul class="links">
-				<li><a href="https://github.com/markandrus/imgswiss">Pipeline.rb</a></li>
+				<li><a href="https://github.com/markandrus/ts">ts</a></li>
+				<li><a href="https://github.com/markandrus/imgswiss">Pipeline</a></li>
 			</ul></div>
 			<div id="bio">
 				<h3>Mark</h3>
