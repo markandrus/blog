@@ -14,12 +14,21 @@
 	</script>
 </head>
 <body id="post" class="hyphenate">
-	<div class="post">
+	<div class="heading">
 		<h2 class="post_title"><span>{{ page.title }}</span></h2>
 		<h3 class="post_date"><span>{{ page.date | date_to_string }}</span></h3>
-		{{ content }}
+		<ul class="post_nav">
+			<li id="next"><a href="{{ page.next.url }}">&#8592; Next</a></li>
+			<li id="archive"><a href="#">Archive</a></li>
+			<li id="prev"><a href="{{ page.previous.url }}">Prev &#8594;</a></li>
+		</ul>
 	</div>
-	<div class="posts_wrapper">
+	<div class="post">
+		<div class="content">
+		{{ content }}
+		</div>
+	</div>
+<!--	<div class="posts_wrapper">
 		<div class="posts">
 			<div><h3>Posts</h3>
 			<ul class="posts">
@@ -50,9 +59,36 @@
 			</div>
 		</div>
 	</div>
+	-->
 <!-- scripts -->
 <script src="/j/jquery.js"></script>
+<script src="/j/jquery.hoverIntent.js"></script>
 <script>
+	$(document).ready(function() {
+		function nextTitle() {
+			var s = '{{ page.next.title}}';
+			s = (s == '') ? '{{ page.title }}' : s;
+			$('h2.post_title span').fadeTo('slow', 0, function() {
+				$('h2.post_title span').text(s).fadeTo('fast', 1);
+			});
+		}
+		function prevTitle() {
+			var s = '{{ page.previous.title}}';
+			s = (s == '') ? '{{ page.title }}' : s;
+			$('h2.post_title span').fadeTo('slow', 0, function() {
+				$('h2.post_title span').text(s).fadeTo('fast', 1);
+			});
+		}
+		function pageTitle() {
+			$('h2.post_title span').fadeTo('fast', 0, function() {
+				$('h2.post_title span').text('{{ page.title }}').fadeTo('fast', 1);
+			});
+		}
+		var nextConfig = { over: nextTitle, interval: 500, out: pageTitle };
+		var prevConfig = { over: prevTitle, interval: 500, out: pageTitle };
+		$('#next a').hoverIntent(nextConfig);
+		$('#prev a').hoverIntent(prevConfig);
+	});
 	$(function () {
 		//var top = $('.posts').offset().top - parseFloat($('.posts').css('margin-top').replace(/auto/, 0));
 		var top = 0;

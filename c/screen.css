@@ -1,317 +1,189 @@
-/*------------------------------------*\
-  RESET
-\*------------------------------------*/
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0b1 | 201101
-   NOTE:WORK IN PROGRESS
-   USE WITH CAUTION AND TEST WITH ABANDON */
-
-html,body,div,span,applet,object,iframe,
-h1,h2,h3,h4,h5,h6,p,blockquote,pre,
-a,abbr,acronym,address,big,cite,code,
-del,dfn,em,img,ins,kbd,q,s,samp,
-small,strike,strong,sub,sup,tt,var,
-b,u,i,center,
-dl,dt,dd, .posts ul, .posts li,
-fieldset,form,label,legend,
-table,caption,tbody,tfoot,thead,tr,th,td,
-article,aside,canvas,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section,summary,
-time,mark,audio,video{
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  font:inherit;
-  vertical-align:baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section{
-  display:block;
-}
-body{
-  line-height:1;
-}
-.posts ul{
-  list-style:none;
-}
-blockquote,q{
-  quotes:none;
-}
-blockquote:before,blockquote:after,
-q:before,q:after{
-  content:'';
-  content:none;
-}
-/* remember to define visible focus styles!
-:focus{
-  outline:?????;
-} */
-
-/* remember to highlight inserts somehow! */
-ins{
-  text-decoration:none;
-}
-del{
-  text-decoration:line-through;
-}
-
-table{
-  border-collapse:collapse;
-  border-spacing:0;
-}
-
-/*------------------------------------*\
-  MAIN
-\*------------------------------------*/
-/* GO! */
-
+* { margin: 0; padding: 0; }
 body {
-	font-size: 12px;
-	font-family: Georgia, serif;
+	font: 0.8125em Georgia, serif;
+	line-height: 1;
+	color: #333;
+	background: #EEE;
 }
 
-div.post {
-	padding: 2em;
-	background: white;
-	margin: 0 auto;
-	max-width: 80em;
-	margin-bottom: 17em;
-}
-
-div.posts_wrapper {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	background: white;
-}
-
-div.posts {
-	padding: 2em;
-	max-width: 76em;
-	margin: 0 auto;
-	border-top: 1px solid #CCCCCC;
-}
-
-div.posts h3 {
+p {
+	font-family: Verdana, sans-serif;
 	line-height: 1.8em;
-	font-size: 1.6em;
-	font-style: italic;
-	font-weight: normal;
+	margin-top: 0.5em;
+	margin-bottom: 1.33em;
 }
 
-p + h3, .highlight + h3, .caption + h3, img + h3 {
-	margin-top: 2em;
+h2, h3, h4 { clear: both; }
+h1, h2, h3, h4 {
+	margin-top: 1.25em;
 }
 
-div.posts ul {
-	margin-bottom: 2em;
+h2 {
+	font-size: 2em;
 }
 
-div.posts ul li {
-	font-size: 1.2em;
-	line-height: 2em;
-}
-
-div.posts ul li a {
-	color: #CCCCCC;
-	text-decoration: none;
-	border-bottom: 1px dotted gray;
-}
-
-div.posts ul li a:hover {
-	color: black;
-	border-bottom: 1px solid black;
-}
-
-div.posts ul li a:active {
-	margin-left: -0.2em;
-	padding: 0.2em;
-	color: white;
-	background: #CC0000;
-	border: none;
-}
-
-h2.post_title {
-	clear: left;
-	color: black;
-	font-size: 3em;
-	margin: 0.66em 0;
-}
-
-h2.post_title span {
-	padding: 0.2em 0;
-}
-
-.post p, .post ul li {
-	font-size: 1.2em;
-	line-height: 2em;
-}
-
-.post p {
-	margin-bottom: 1em;
-}
-
-.post img, .post embed {
-	display: block;
-	margin: 2em auto;
-	max-width: 92.5%;
-}
-
-.highlight {
-	font-size: 1.2em;
-	padding: 1em;
-	margin: 1em 0;
-	background: #333333;
-}
-
-a, a:active {
-    color: #CC0000;
-}
-a:hover, a:visited {
-    color: #990000;
-}
-
-a:active {
-	color: black;
-}
-
-hr {
-	border: none;
-	border-bottom: 1px dotted #CCCCCC;
-}
-
-/*#bio {
-	opacity: 0.25;
-	filter: alpha(opacity=25);
-}
-
-#bio:hover {
-	opacity: 1;
-	filter: alpha(opacity=100);
-}*/
-
-#bio p {
-	line-height: 2em;
-	font-size: 1.2em;
-	color: #CCCCCC;
-}
-
-img#pic {
-	width: 4em;
-	margin: 1em auto;
-	padding: 2px;
-	border: 1px solid #CCCCCC;
-	float: right;
-}
-
-h3.hr {
-	text-align: center;
-}
-
-em {
-	font-style: italic;
-}
-
-code {
-	font-family: Monaco, Consolas, fixed-width;
-	font-size: 0.8em;
-	border: 1px solid #CCCCCC;
-	background: white;
-	padding: 1px 0.2em;
-}
-
-pre code {
-	font-family: Monaco, Consolas, fixed-width;
-	font-size: 0.8em;
-	border: none;
-	background: none;
-	padding: 0;
-}
-
-.post h3 {
-	line-height: 2em;
-	font-size: 1.8em;
-	color: #CC0000;
-	border-top: 1px dotted #CCCCCC;
-}
-
-h3.post_date {
-	line-height: 1em;
-	font-size: 1em;
-	border-top: none;
-	margin-top: -3.2em;
-	margin-bottom: 1.4em;
-	text-align: right;
-	color: #CCCCCC;
-	padding-bottom: 0.8em;
-}
-
-h3.post_date span {
-	margin: 0 -0.2em;
-	padding: 0 0.2em;
-	background: white;
-}
-
-.caption {
-	border: 1px solid #CCCCCC;
-	margin-bottom: 2em;
-}
-
-.caption p {
-	line-height: 2em;
-	font-size: 0.8em;
-	border-top: 1px solid #CCCCCC;
-	background: #EEEEEE;
-	margin-bottom: 0;
-	padding: 0 0.4em;
-}
-
-.caption code {
-	font-size: inherit;
-	font-family: inherit;
-	padding: 0;
-	margin: 0;
-	background: none;
-	font-weight: bold;
-	border: none;
-}
-
-.post ol li p {
-	margin: 0;
+h3 {
+	font-size: 1.5em;
 }
 
 h4 {
-	color: #CC0000;
-	line-height: 2em;
-	font-size: 1.4em;
+	font-size: 1em;
 }
 
-.posts_wrapper .posts div {
-	float: left;
+li { line-height: 1.8em; margin-left: 2em; }
+ul li:last-child, ol li:last-child { margin-bottom: 1.33em; }
+
+a { color: #6611BB; }
+a:visited { color: #665588; }
+a:hover { color: #6655FF; }
+
+div.post, div.heading {
+	width: 50em;
+	margin: 0 auto;
+	margin-bottom: 1.33em;
+}
+
+div.post {
+	background: white;
+	border: 1px solid white;
+}
+
+div.post div.content {
+	border: 1px solid #EEE;
 	display: block;
-	width: 25%;
+	padding: 1em 2em;
 }
 
-a#more, a#more:hover, a#more:active {
-	text-decoration: none;
-	color: black;
-	border: none;
-	background: none;
+div.post div.content li {
+	font-family: Verdana, sans-serif;
 }
 
-a#more:hover {
-	border-bottom: 1px solid black;
-}
-
-a#more:active {
-	color: red;
-	border: none;
-}
-
-#default .post div {
-	width: 50%;
+div.heading h2.post_title {
 	float: left;
+	margin-left: 1em;
+	padding-bottom: 0.33em;
+	margin-bottom: 0.33em;
+	border-bottom: 1px dotted #CCC;
+	width: 91.9%;
+}
+
+div.heading h3.post_date {
+/*	text-align: right; */
+	font-size: 1em;
+/*	position: relative;
+	top: -1.2em;
+	margin-right: 2em;
+	color: #CCC; */
+	color: #CCC;
+	/* new */
+	margin-bottom: 1.5em;
+	margin-left: 2em;
+}
+div.heading h3.post_date span:hover {
+	color: #333;
+}
+
+div.heading ul.post_nav {
+	position: relative;
+	top: -1em;
+	display: block;
+	height: 1.8em;
+	/* padding-right: 2em; */
+	/* new */
+	width: 60%;
+	float: right;
+	position: relative;
+	top: -3em;
+	left: -2em;
+	border-left: 1px dotted #CCC;
+	border-right: 1px dotted #CCC;
+	margin-bottom: -1em;
+}
+
+div.heading ul.post_nav li {
+	margin: 0;
+	padding: 0;
+	width: 33%;
+	float: left;
+	list-style-type: none;
+}
+div.heading ul.post_nav li a {
+	text-decoration: none;
+	color: #CCC;
+}
+div.heading ul.post_nav li a:hover {
+	/* text-decoration: underline; */
+	color: #333;
+}
+div.heading ul.post_nav li#next {
+	text-align: left;
+}
+div.heading ul.post_nav li#next a {
+	padding-left: 1em;
+}
+div.heading ul.post_nav li#archive {
+	text-align: center;
+	border-left: 1px dotted #CCC;
+	border-right: 1px dotted #CCC;
+}
+div.heading ul.post_nav li#prev {
+	text-align: right;
+}
+div.heading ul.post_nav li#prev a {
+	margin-right: 1em;
+}
+
+div.post div.caption {
+	border: 1px solid #EEE;
+	margin-bottom: 1.33em;
+	border-bottom: 1px solid #CCC;
+}
+
+div.post div.caption p {
+	border-top: 1px solid #EEE;
+	background: #EEE;
+	padding: 0.5em 2em;
+	margin: 0;
+	font-size: 0.8em;
+}
+
+div.post div.caption img, div.post img {
+	display: block;
+	max-width: 100%;
+	margin: 0.5em auto; /* change this later? */
+}
+
+div.post img { margin-bottom: 1.33em; }
+
+div.post h3 + div.highlight,
+div.post h4 + div.highlight {
+	margin-top: 0.5em;
+}
+
+div.post div.highlight {
+	background: #EEE;
+	margin-bottom: 1.33em;
+	border: 1px solid #EEE;
+}
+
+div.post div.highlight pre {
+	font-size: 1em;
+	line-height: 1.8em;
+	padding: 1em 2em;
+	border: 1px solid white;
+	overflow: auto;
+}
+
+div.post p code, div.post li code {
+	padding: 2px;
+	background: white;
+	border: 1px solid #EEE;
+}
+
+div.content > * { margin-top: 0.5em; }
+
+div.post div.content embed {
+	max-width: 100%;
+	margin-top: 0.5em;
+	margin-bottom: 1.33em;
 }
